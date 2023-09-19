@@ -52,8 +52,8 @@ const Dirtectional = () => {
       imgRef : img2,
     },
     {
-      heading: "Love ",
-      heading2: "Samosas and Indian Cuisine",
+      heading: "Love Samosas",
+      heading2: "and Indian Cuisine",
       style: "",
       ref: dirt3,
       x : 500,

@@ -100,7 +100,7 @@ const Project = () => {
         },
         "flag"
       ).from(
-        app1.current,
+        container.current,
         {
           opacity: 0,
           

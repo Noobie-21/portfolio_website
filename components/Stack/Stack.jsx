@@ -116,7 +116,7 @@ const Stack = () => {
       <div className={`${styles.innerDiv}`}>
         <div className={`${styles.heading}`}>
           <h1 ref={tech}>Technology </h1>
-          <p ref={techpara}>which I know & Familiar with percentage</p>
+          <p ref={techpara}>which I know & Familiar with</p>
         </div>
         <div id="stack" ref={techStack} className={`${styles.techStack}`}>
           <div id="lang" className={`${styles.tech} si`}>
