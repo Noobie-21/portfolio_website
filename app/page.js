@@ -51,7 +51,7 @@ export default function Home() {
         className="w-[50px] h-[50px] rounded-full mix-blend-difference  absolute top-0 left-0  border border-white z-20 pointer-events-none overflow-hidden   object-cover bg-white flex justify-center items-center font-bold -translate-x-[50%] -translate-y-[50%] "
       ></div>
 
-      <div className="h-full w-full data-scroll-container" id="main">
+      <div className="h-full w-full overflow-x-hidden" id="main">
         <LandingPage />
         <About />
         <Project />
