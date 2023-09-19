@@ -28,6 +28,7 @@
 
 .anchor{
     position: relative;
+    
 }
 
 .anchor::before {
@@ -62,7 +63,7 @@
     line-height: 93%;
     width: 40%;
     font-weight: 800;
-    -webkit-text-stroke: 0.4vw #494542;
+    -webkit-text-stroke: 0.4vw #7d7b79;
     letter-spacing: -6px;
     opacity: 0.8;
 }

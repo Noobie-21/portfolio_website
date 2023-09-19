@@ -30,3 +30,43 @@
     font-family: "Montserrat";
     font-weight: 400;
 }
+
+.hooby_section {
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+.inner_section{
+    display: flex;
+    padding: 60px;
+    align-items: center;
+}
+.booksHobbySection {
+    display: felx;
+    /* justify-content: center;
+     */
+    flex-direction: column;
+     align-items: center;
+
+}
+
+.booksHobbySection > svg {
+    margin: auto auto;  
+}
+
+.booksHobbySection > h1 {
+    
+    font-size: 3rem;
+    font-family: 'Montserrat';
+    letter-spacing: -3px;
+    line-height: 45px;
+}
+
+.booksHobbySection > p {
+    font-size: 14px;
+    font-family: 'Borel';
+    padding: 11px 0;
+    width: 27vw;
+}

@@ -60,6 +60,13 @@ const Banner = ({mouse}) => {
 
     setTimeline(tl2)
 
+
+    const first_head_ref = helloRef.current;
+    const second_head_ref = helloRef.current;
+
+
+    
+
   } , [])
 
 
