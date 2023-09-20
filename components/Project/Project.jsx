@@ -138,8 +138,8 @@ const Project = () => {
       });
       element.addEventListener("mouseleave", () => {
         gsap.to(mouse, {
-          width: "20px",
-          height: "20px",
+          width: "50px",
+          height: "50px",
           duration: 0.5,
         });
         mouse.innerHTML = "";

@@ -1,0 +1,107 @@
+.main {
+    width: 100%;
+    height:fit-content;
+    color: #dadada;
+    position: relative;
+    padding: 70px;
+}
+
+.innerDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding: 40x 40px;
+}
+.h1 {
+    font-family: borel;
+    font-size: 6rem;
+    font-weight: 800;
+    /* padding: 10px 0; */
+    position: relative;
+    line-height: 50px;
+    /* border-bottom: 2px solid #dadada; */
+
+}
+.h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(107, 107, 107);
+}
+.gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+}
+
+.contactHandle {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 40px 200px;
+    /* align-items: center; */
+    position: relative;
+    z-index: 2;
+}
+
+.socialMediaHandle{
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.socialHandle {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* flex-direction: column; */
+    width: 100%;
+    gap: 20px;
+    cursor: pointer;
+}
+.socialHandle > h1 {
+    font-size: 16px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+}
+
+.socialHandle > h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(107, 107, 107);
+    transition: all 1s linear;
+}
+
+.socialHandle > h1:hover:before {
+    width: 100%;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Montserrat";
+    font-weight: 800;
+}
+
+.email > h1:last-child {
+    font-size: 22px;
+}
