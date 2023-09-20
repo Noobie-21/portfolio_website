@@ -102,6 +102,13 @@
     font-weight: 800;
 }
 
-.email > h1:last-child {
+
+
+#copy #text {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 350px;
+    text-align: center;
     font-size: 22px;
 }

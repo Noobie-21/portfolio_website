@@ -54,6 +54,17 @@ const Contact = () => {
             })
         })
 
+        const copy = document.querySelector("#copy")
+
+        copy.addEventListener("click" ,() => {
+            const text = copy.querySelector("#text");
+            text.select()
+            // text.setSele
+            document.execCommand("copy")
+            window.getSelection().removeAllRanges()
+
+        })
+
 
 
     } , [])
@@ -85,7 +96,10 @@ const Contact = () => {
 
                 <div className={styles.email}>
                     <h1>EMAIL</h1>
-                    <h1>amangupta954055@gmail.com</h1>
+                    <div id='copy'>
+
+                    <input id='text' value={"amangupta954055@gmail.com"} readOnly />
+                    </div>
                 </div>
             </div>
         </div>
