@@ -69,15 +69,15 @@ const Contact = () => {
             <h1 className={styles.h1}>Contact</h1>
             <div className={styles.contactHandle}>
                 <div className={styles.socialMediaHandle} ref={socialHandle}>
-                    <Link href={'https://github.com/Noobie-21'} className={`${styles.socialHandle}   social` } >
+                    <Link href={'https://github.com/Noobie-21'} className={`${styles.socialHandle}   social` } target='_blank' >
                         <AiFillGithub size={40} className='text-purple-300' />
                         <h1>Github</h1>
                     </Link>
-                    <Link href={'/'} className={`${styles.socialHandle}    social` }>
+                    <Link href={'/'} target='_blank' className={`${styles.socialHandle}    social` }>
                         <AiFillInstagram size={40} className='text-purple-300' />
                         <h1>INSTAGRAM</h1>
                     </Link>
-                    <Link href={'/'} className={`${styles.socialHandle}  social` }>
+                    <Link href={'/'} target='_blank' className={`${styles.socialHandle}  social` }>
                         <AiFillLinkedin size={40} className='text-purple-300' />
                         <h1>LINKEDIN</h1>
                     </Link>
