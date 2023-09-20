@@ -56,6 +56,10 @@
     flex-direction: column;
      align-items: center;
      position: relative;
+    padding: 60px 0px ;
+    width: 350px;
+    height: 420px;
+
 
 }
 
@@ -69,7 +73,28 @@
     font-family: 'Montserrat';
     letter-spacing: -3px;
     line-height: 45px;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 14px;
 }
+
+.booksHobbySection > h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(124, 124, 124);
+    transition: all 2s linear;
+
+}
+
+
+.booksHobbySection > h1:hover:before {
+    width: 100%;
+}
+
 
 .booksHobbySection > p {
     font-size: 14px;

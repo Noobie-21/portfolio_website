@@ -24,19 +24,27 @@ const Hobby = () => {
     // console.log(heading_section)
     // document.querySelectorAll
 
-    heading_inner_element.forEach(el => {
+
+    const gsapScrollTrigger = (ref , start , end) => {
       const timeline = gsap.timeline({
         
-          scrollTrigger : {
-            markers : true,
-            trigger : main_ref.current,
-            // scroller:document.documentElement,
-            start : "-50% top",
-            end : "-30 top",
-            scrub : 3
-          }
-        
+        scrollTrigger : {
+          // markers : true,
+          trigger : ref,
+          scroller:document.documentElement,
+          start : start,
+          end : end,
+          scrub : 3
+        }
       })
+      return timeline
+      
+    }
+
+    heading_inner_element.forEach(el => {
+      
+        const timeline = gsapScrollTrigger(main_ref.current , "-80% top" , "-30% top")
+      
       timeline.fromTo(el , {
      
         x : -50,
@@ -48,6 +56,28 @@ const Hobby = () => {
         stagger : 1
       })
       
+    })
+
+    const hobby_upper_ref = hooby_section_ref.current;
+
+    const hobby_inner_section_ref = hobby_upper_ref.querySelectorAll(".hobby_section_class" , "60% top" , "top bottom")
+
+    hobby_inner_section_ref.forEach((el , i) => {
+
+      const elementX = el.getBoundingClientRect()
+      const timeline = gsapScrollTrigger(el)
+      timeline.fromTo(el , {
+        x : -50,
+        opacity : 0
+      },
+      {
+        opacity  : 1 ,
+        x : 0,
+        duration : 0.5,
+        stagger : 1,
+        delay : i / 10,
+      })
+
     })
     
         
@@ -66,27 +96,22 @@ const Hobby = () => {
               <IoBookSharp size={100} />
               <h1>Reading Books</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                minus asperiores cumque eius error aspernatur explicabo. Iusto
-                officia alias necessitatibus.
+                One of the best habit i accquire is book reading, yet i am not active reader, but i consider to complete one-two book in a month.
+                some books are :- "Rich and Poor Dad" , "The subtal art of not giving fuck" , "The Atomic habit".
               </p>
             </div>
             <div className={`${styles.booksHobbySection} hobby_section_class`}>
               <GiConsoleController size={100} />
               <h1>Playing Games</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                minus asperiores cumque eius error aspernatur explicabo. Iusto
-                officia alias necessitatibus.
+                I love playing both digital and physical game , like criket , kabbadi , chess , valorant , and many more
               </p>
             </div>
             <div className={`${styles.booksHobbySection} hobby_section_class`}>
               <BsMusicPlayer size={100} />
               <h1>Listening Music</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                minus asperiores cumque eius error aspernatur explicabo. Iusto
-                officia alias necessitatibus.
+                Music is awesome and powerfull to feel productivity in work and any kind of stuff!
               </p>
             </div>
             <div className={`${styles.booksHobbySection} hobby_section_class`}>
@@ -221,11 +246,9 @@ const Hobby = () => {
                   </g>
                 </svg>
               </div>
-              <h1>Watching Anime</h1>
+              <h1>Anime</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                minus asperiores cumque eius error aspernatur explicabo. Iusto
-                officia alias necessitatibus.
+                I spend most of my free time to watching anime, and i do love watching anime, it teach me lot of thing.
               </p>
             </div>
           </div>
