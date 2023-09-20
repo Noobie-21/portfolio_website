@@ -11,6 +11,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import Project from "@/components/Project/Project";
 import Stack from "@/components/Stack/Stack";
 import Hobby from "@/components/Hobby/Hobby";
+import Contact from "@/components/Contact/Contact";
 // import Project2 from "@/components/Project2/Project";
 
 export default function Home() {
@@ -58,6 +59,7 @@ export default function Home() {
         <Project/>
         <Stack />
         <Hobby />
+        <Contact />
 
         {/* <Project2 /> */}
 
