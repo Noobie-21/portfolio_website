@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   body {
     height : 100vh;
     overflow: hidden;
