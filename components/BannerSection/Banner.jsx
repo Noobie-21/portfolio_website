@@ -90,7 +90,9 @@ const Banner = ({mouse}) => {
         </div>
 
         <div className={styles.image} ref={imageRef}  >
-          <Image priority="true"  className={styles.amanImage} src={aman} height={400} width={400} alt='Profile pic of sexy man name is Aman Gupta'  />
+          <Image priority="true"   className={styles.amanImage} src={aman} height={"auto"} width={
+            'auto'
+          } alt='Profile pic of sexy man name is Aman Gupta'  />
           
         </div>
     </div>

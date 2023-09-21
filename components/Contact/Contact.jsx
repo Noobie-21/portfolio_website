@@ -12,16 +12,19 @@ const Contact = () => {
 
     const socialHandle = useRef(null)
     const main = useRef(null)
+    const email = useRef(null)
+    const gifs = useRef(null)
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         const mouse = document.querySelector("#mouse")
-
+        
 
         const timeline = gsap.timeline({
             scrollTrigger : {
-                markers : true,
+                // markers : true,
                 trigger : main.current,
-                start : "top",
+                start : "-50% top",
+                end : '-30% top',
                 scrub : 3
             }
         })
@@ -30,7 +33,7 @@ const Contact = () => {
         const socialHandleChild = socialHandle_ref.querySelectorAll('.social')
 
 
-        socialHandleChild.forEach(element => {
+        socialHandleChild.forEach((element, i) => {
             element.addEventListener("mouseenter" , () => {
                 gsap.to(mouse , {
                     width : "80px",
@@ -52,18 +55,58 @@ const Contact = () => {
                 mouse.innerHTML = ""
                 mouse.style.mixBlendMode = "none"
             })
+
+            timeline.fromTo(main.current , {opacity : 0} , {
+                opacity  : 1,
+                duration : 0.2
+            } , "flag").fromTo(gifs.current , {
+                opacity : 0,
+                x : -50
+            },
+            {
+                opacity : 1,
+                x : 0
+            } , "flag")
+            .fromTo(element , {
+                opacity : 0,
+                x : -50,
+                stagger : 1
+            },
+            {
+                opacity : 1,
+                x : 0,
+                delay : i /10
+            })
         })
 
-        const copy = document.querySelector("#copy")
-
-        copy.addEventListener("click" ,() => {
-            const text = copy.querySelector("#text");
-            text.select()
-            // text.setSele
-            document.execCommand("copy")
-            window.getSelection().removeAllRanges()
-
+        timeline.fromTo(email.current , {
+            opacity : 0,
+            x : -50,
+        }, {
+            opacity : 1,
+            x : 0
         })
+
+        const email_ref = email.current;
+
+        email_ref.addEventListener('mouseenter' , () => {
+            gsap.to(mouse , {
+                width : "80px",
+                height : "80px",
+                duration : 0.1
+            })
+            mouse.innerHTML = "Email Me"
+        })
+
+        email_ref.addEventListener('mouseleave' , () => {
+            gsap.to(mouse , {
+                width : "40px",
+                height : "40px",
+                duration : 0.1
+            })
+            mouse.innerHTML = ""
+        })
+        
 
 
 
@@ -71,8 +114,8 @@ const Contact = () => {
   return (
     <div className={styles.main} ref={main}>
         <div className={styles.innerDiv}>
-            <div className={styles.gif}>
-                <Image src={gif} className='w-auto h-auto' /><div className='text-sm'>
+            <div className={styles.gif} ref={gifs}>
+                <Image src={gif} alt='Gif image of contact' className='w-auto h-auto' /><div className='text-sm'>
                 Illustration by <a href="https://icons8.com/illustrations/author/627444">Julia G</a> from <a href="https://icons8.com/illustrations">Ouch!</a>
 
                 </div>
@@ -94,11 +137,11 @@ const Contact = () => {
                     </Link>
                 </div>
 
-                <div className={styles.email}>
+                <div className={styles.email} ref={email}>
                     <h1>EMAIL</h1>
                     <div id='copy'>
 
-                    <input id='text' value={"amangupta954055@gmail.com"} readOnly />
+                    <Link href={'mailto:amangupta954055@gmail.com'}  id='text'>amangupta954055@gmail.com</Link>
                     </div>
                 </div>
             </div>

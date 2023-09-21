@@ -141,7 +141,7 @@ const Dirtectional = () => {
 
             <div className={`${styles.center}`} >
             <div className={`${styles.imageContainer}`} ref={el.imgRef}>
-              <Image src={el.img}   className="object-cover bg-bottom  h-full w-full"/>
+              <Image src={el.img}   className="object-cover bg-bottom  h-full w-full" alt="image tag"/>
               <div className={styles.overlay}></div>
             </div>
             </div>

@@ -50,7 +50,7 @@ export default function Home() {
         ref={mouse}
         id="mouse"
         
-        className="w-[50px] h-[50px] rounded-full mix-blend-difference  absolute top-0 left-0  border border-white z-20 pointer-events-none overflow-hidden   object-cover bg-white flex justify-center items-center font-bold -translate-x-[50%] -translate-y-[50%] "
+        className="w-[50px] h-[50px] rounded-full   absolute top-0 left-0  border border-white z-20 pointer-events-none overflow-hidden   object-cover bg-transparent text-slate-100 flex justify-center items-center font-bold -translate-x-[50%] -translate-y-[50%] mix-blend-difference "
       ></div>
 
       <div className="h-full w-full overflow-x-hidden " id="main">
