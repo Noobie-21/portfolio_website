@@ -35,7 +35,8 @@ export default function Home() {
 
   useEffect(() => {
     const mouse = document.querySelector("#mouse");
-    window.addEventListener("mousemove", (el) => {
+    const body = document.querySelector('body')
+    body.addEventListener("mousemove", (el) => {
       gsap.to(mouse, {
         x: el.pageX,
         y: el.pageY,
