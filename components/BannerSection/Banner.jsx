@@ -71,13 +71,13 @@ const Banner = ({mouse}) => {
 
 
   return (
-    <div ref={main} className='  relative w-full h-full'>
+    <div ref={main} className='relative w-full h-full'>
         <div id='navbar' className={styles.navbar}>
           <h1 className={styles.logo}>Logo</h1>
           <div id="nav-right" className={styles.navright}>
             <Link href="#project" id='project_link' className={styles.anchor}>Project</Link>
             <Link  href="#about" id='about_link' className={styles.anchor}>About</Link>
-            <p  onClick={() => timeline.play()}  className={styles.anchor}>Contact</p>
+            <Link href={'#contact'}  className={styles.anchor}>Contact</Link>
           </div>
         </div>
         <div className={styles.intro}>

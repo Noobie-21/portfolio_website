@@ -19,44 +19,40 @@ const BannnerSection = () => {
 
   const homepageLoad = () => {
     const tl = gsap.timeline();
-
-    tl.to(heading4.current, {
+    const delay = [heading4.current, heading3.current, heading2.current, heading1.current]
+    const body = document.querySelector('#main')
     
-      translateY: -5,
-      duration: 1,
+const removeClassList = () =>  {
+  body.classList.remove("hidden")
+}
+
+    
+    delay.forEach((el , i) => {
+      tl.to(el, {
+        translateY: -5,
+        duration: 1,
+        delay : i / 10
+      })
     })
-      .to(heading3.current, {
-       
-        translateY: -5,
-        duration: 1,
-      })
-      .to(heading2.current, {
-        
-        translateY: -5,
-        duration: 1,
-      })
-      .to(heading1.current, {
-        
-        translateY:  -5,
-        duration: 1,
-        
-      })
-      .to(main.current, {
+    
+    
+      tl.to(main.current, {
         top: "-100%",
         duration: 1,
-        delay: 1,
+        delay: 0.5,
         zIndex : -1
-      }).from(home.current , {
-        opacity : 0,
-        duration : 0.5,
-        delay : 0.5,
-        ease : "Expo.easeIn"
       })
+      // .from(home.current , {
+      //   opacity : 0,
+      //   duration : 0.5,
+      //   delay : 0.5,
+      //   ease : "Expo.easeIn"
+      // })
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
 
-    // homepageLoad()
+    homepageLoad()
     
   } , []);
 
@@ -85,7 +81,7 @@ const BannnerSection = () => {
       <div
         ref={main}
         id="loading-page"
-        className=" h-screen w-[100%]  justify-between px-10 py-5 absolute top-0 left-0 overflow-hidden z-40 hidden  "
+        className=" h-screen w-full  justify-between px-10 py-5 absolute top-0 left-0 overflow-hidden z-40 flex  "
       >
 
         <div className="flex flex-col ">
@@ -137,9 +133,9 @@ const BannnerSection = () => {
         </div>
       </div>
 
-    <div ref={home} className="w-full h-full">
+    {/* <div ref={home} className="w-full h-full">
       <Banner  />
-    </div>
+    </div> */}
       
     </>
   );
