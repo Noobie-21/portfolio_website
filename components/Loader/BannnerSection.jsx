@@ -22,10 +22,6 @@ const BannnerSection = () => {
     const delay = [heading4.current, heading3.current, heading2.current, heading1.current]
     const body = document.querySelector('#main')
     
-const removeClassList = () =>  {
-  body.classList.remove("hidden")
-}
-
     
     delay.forEach((el , i) => {
       tl.to(el, {

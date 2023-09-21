@@ -12,27 +12,30 @@ import Link from "next/link";
 
 const Project = () => {
   const container = useRef(null);
-  const app1 = useRef(null);
-  const app2 = useRef(null);
-  const app3 = useRef(null);
-  const imageRef1 = useRef(null);
-  const imageRef2 = useRef(null);
-  const imageRef3 = useRef(null);
   const heading = useRef(null);
   const para = useRef(null);
+
+  const app1 = useRef(null);
+  const imageRef1 = useRef(null);
+
+  const app2 = useRef(null);
+  const imageRef2 = useRef(null);
+
+  const app3 = useRef(null);
+  const imageRef3 = useRef(null);
 
   const projectDetails = [
     {
       serial_number: 1,
       project_name: "Reddit Clone",
       project_image: details,
-      projectDetails: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suntfugit, commodi adipisci eligendi nihil odit. Odio quis quam ametinventore modi, ab explicabo, voluptates dignissimos asperiores eum possimus molestiae, illum sapiente?`,
+      projectDetails: `A simple reddit clone with functionality of Authrization , create community , add post , delete post and some more etc.`,
       tech_stack: ["Next js", "Tailwind Css", "firebase", "atom"],
       link: "https://reddit-clone-app-eight.vercel.app/",
       github: "https://github.com/Noobie-21/redditcloneapp",
       ref: app1,
       imageRef: imageRef1,
-      style : "flex-row"
+      style: "flex-row",
     },
     {
       serial_number: 2,
@@ -44,7 +47,7 @@ const Project = () => {
       github: "https://github.com/Noobie-21/event-hub",
       ref: app2,
       imageRef: imageRef2,
-      style : "flex-row-reverse"
+      style: "flex-row-reverse",
     },
     {
       serial_number: 3,
@@ -56,7 +59,7 @@ const Project = () => {
       github: "https://github.com/Noobie-21/Aman",
       ref: app3,
       imageRef: imageRef3,
-      style : "flex-row"
+      style: "flex-row",
     },
   ];
 
@@ -99,15 +102,10 @@ const Project = () => {
           x: 0,
         },
         "flag"
-      ).from(
-        container.current,
-        {
-          opacity: 0,
-          
-        },
-        
       )
-      
+      .from(container.current, {
+        opacity: 0,
+      });
 
     projectDetails.forEach((el) => {
       const elment = el.ref.current;
@@ -158,9 +156,7 @@ const Project = () => {
             something.{" "}
           </p>
         </div>
-        
 
-        
         {projectDetails.map((el) => {
           return (
             <div
@@ -200,7 +196,6 @@ const Project = () => {
             </div>
           );
         })}
-       
       </div>
       <div className="w-full flex justify-center items-center mb-[50px] ">
         <h1 className="text-[2rem] "> Next showcase project soon!</h1>

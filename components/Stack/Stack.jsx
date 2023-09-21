@@ -12,9 +12,6 @@ import {
 } from "react-icons/si";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "splitting/dist/splitting.css";
-import "splitting/dist/splitting-cells.css";
-import Splitting from "splitting";
 
 const Stack = () => {
   const main = useRef(null);
@@ -119,35 +116,35 @@ const Stack = () => {
           <p ref={techpara}>which I know & Familiar with</p>
         </div>
         <div id="stack" ref={techStack} className={`${styles.techStack}`}>
-          <div id="lang" className={`${styles.tech} si`}>
+          <div  className={`${styles.tech} si`}>
             <TbBrandNextjs size={40} />
             <h1>Next Js</h1>
           </div>
-          <div id="lang" className={`${styles.tech} si`}>
+          <div  className={`${styles.tech} si`}>
             <SiTailwindcss size={40} />
             <h1>Tailwind Css</h1>
           </div>
-          <div id="lang" className={`${styles.tech} si`}>
+          <div  className={`${styles.tech} si`}>
             <TbFileTypeCss size={40} />
             <h1>CSS</h1>
           </div>
-          <div id="lang" className={`${styles.tech} si`}>
+          <div  className={`${styles.tech} si`}>
             <SiFirebase size={40} />
             <h1>Firebase</h1>
           </div>
-          <div id="lang" className={`${styles.tech} si`}>
+          <div  className={`${styles.tech} si`}>
             <SiMongodb size={40} />
             <h1>MongoDb</h1>
           </div>
-          <div id="lang" className={`${styles.tech} si`}>
+          <div  className={`${styles.tech} si`}>
             <SiTypescript size={40} />
             <h1>Typescript (basic)</h1>
           </div>
-          <div id="lang" className={`${styles.tech} si`}>
+          <div  className={`${styles.tech} si`}>
             <SiJavascript size={40} />
             <h1>Javascript</h1>
           </div>
-          <div id="lang" className={`${styles.tech} si`}>
+          <div  className={`${styles.tech} si`}>
             <SiPython size={40} />
             <h1>Python</h1>
             <span>(basic-intermidiate)</span>

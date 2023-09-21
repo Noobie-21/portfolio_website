@@ -11,20 +11,20 @@ const Dirtectional = () => {
   const ref = useRef(null);
 
   const dirt1 = useRef(null);
-  const dirt2 = useRef(null);
-  const dirt3 = useRef(null);
-  const dirt4 = useRef(null);
   const para1 = useRef(null);
-  const para2 = useRef(null);
-  const para3 = useRef(null);
-  const para4 = useRef(null);
   const img1 = useRef(null);
-  const img2 = useRef(null);
-  const img3 = useRef(null);
-  const img4 = useRef(null);
-  const imageContainer = useRef(null);
 
-  const hover = useRef(null)
+
+  const dirt2 = useRef(null);
+  const para2 = useRef(null);
+  const img2 = useRef(null);
+
+
+  const dirt3 = useRef(null);
+  const para3 = useRef(null);
+  const img3 = useRef(null);
+
+
 
   const arrays = [
     {
@@ -40,7 +40,7 @@ const Dirtectional = () => {
       paraRef : para1
     },
     {
-      heading: "18 Year",
+      heading: "19 Year Old",
       heading2: "Aman Gupta",
       style: "",
       ref: dirt2,
@@ -156,9 +156,14 @@ const Dirtectional = () => {
 
 export default Dirtectional;
 
+/**
+ * Renders a banner component with the specified styling classes and content.
+ * @param {ReactNode} children - The content to be rendered inside the banner component.
+ * @returns {JSX.Element} - A div element with the specified styling classes and the children content rendered inside it.
+ */
 export const Banner = ({ children }) => {
   return (
-    <div className={`w-[100%] h-full  flex justify-center  flex-col mt-[15px]  relative ${styles.hovering}    `}>
+    <div className="w-full h-full flex justify-center flex-col mt-2 relative hovering">
       {children}
     </div>
   );

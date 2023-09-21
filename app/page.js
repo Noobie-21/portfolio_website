@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import LandingPage from "@/components/Landing_Page/LandingPage";
 import Banner from "@/components/BannerSection/Banner";
 import gsap from "gsap";
-import useMouse from "@/hooks/useMouse";
 import About from "@/components/About/About";
 
 import LocomotiveScroll from "locomotive-scroll";
@@ -21,68 +20,60 @@ import BannnerSection from "@/components/Loader/BannnerSection";
  */
 export default function Home() {
   const mouseRef = useRef(null);
-  const [loading , setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
     });
 
-    
+    const aboutLink = document.querySelector("#about_link");
+    const about = document.querySelector("#about");
+    const project = document.querySelector("#project");
+    const projectLink = document.querySelector("#project_link");
 
-    const aboutLink = document.querySelector('#about_link');
-    const about = document.querySelector('#about');
-    const project = document.querySelector('#project');
-    const projectLink = document.querySelector('#project_link');
-
-    // console.log(aboutLink)
-
-    // try {
-      
-    //   aboutLink.addEventListener('click', () => locomotiveScroll.scrollTo(about));
-    //   projectLink.addEventListener('click', () => locomotiveScroll.scrollTo(project));
-
-    //   // return () => {
-    //   //   aboutLink.removeEventListener('click', () => locomotiveScroll.scrollTo(about));
-    //   //   projectLink.removeEventListener('click', () => locomotiveScroll.scrollTo(project));
-    //   // };
-
-      
-
-
-    // } catch (error) {
-    //   console.log({
-    //     err : error
-    //   })
-    // }
-
+    console.log(aboutLink);
 
     setTimeout(() => {
-      setLoading(false)
-    } , 6500)
+      setLoading(false);
+    }, 6500);
 
-    
-  }, []);
+    if (!loading) {
+      aboutLink.addEventListener("click", () =>
+        locomotiveScroll.scrollTo(about)
+      );
+      projectLink.addEventListener("click", () =>
+        locomotiveScroll.scrollTo(project)
+      );
+
+
+      return () => {
+        aboutLink.removeEventListener("click", () =>
+          locomotiveScroll.scrollTo(about)
+        );
+        projectLink.removeEventListener("click", () =>
+          locomotiveScroll.scrollTo(project)
+        );
+      };
+    }
+
+   
+  }, [loading]);
 
   useEffect(() => {
     const mouse = mouseRef.current;
-    const body = document.querySelector('body');
-
-    
+    const body = document.querySelector("body");
 
     const handleMouseMove = (event) => {
       gsap.to(mouse, {
         x: event.pageX,
         y: event.pageY,
         duration: 0.5,
-      
       });
     };
 
     body.addEventListener("mousemove", handleMouseMove);
-
-   
 
     return () => {
       body.removeEventListener("mousemove", handleMouseMove);
@@ -98,18 +89,19 @@ export default function Home() {
       ></div>
 
       <div className="h-full w-full overflow-x-hidden" id="main">
-        {
-          loading ?<BannnerSection /> : <>
-          <Banner />
-        <About />
-        <Project />
-        <Stack />
-        <Hobby />
-        <Contact />
+        {loading ? (
+          <BannnerSection />
+        ) : (
+          <>
+            <Banner />
+            <About />
+            <Project />
+            <Stack />
+            <Hobby />
+            <Contact />
           </>
-        }
+        )}
       </div>
     </>
   );
 }
-
