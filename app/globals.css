@@ -16,6 +16,9 @@ body {
   background-color: #000;
   /* transition: a 1s linear; */
 }
+.hidden {
+  overflow: hidden;
+}
 
 
 body::-webkit-scrollbar {
