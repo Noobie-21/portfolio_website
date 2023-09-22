@@ -21,19 +21,23 @@ import BannnerSection from "@/components/Loader/BannnerSection";
  */
 export default function Home() {
   const mouseRef = useRef(null);
+  const bodys = useRef(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
+    if(typeof document !== 'undefined'){
 
-    const aboutLink = document.querySelector("#about_link");
-    const about = document.querySelector("#about");
+      const aboutLink = document.querySelector("#about_link");
+      const about = document.querySelector("#about");
+  
+      const project = document.querySelector("#project");
+      const projectLink = document.querySelector("#project_link");
+  
+      const contact = document.querySelector('#contact')
+      const contactLink = document.querySelector('#contact-link')
+    }
 
-    const project = document.querySelector("#project");
-    const projectLink = document.querySelector("#project_link");
-
-    const contact = document.querySelector('#contact')
-    const contactLink = document.querySelector('#contact-link')
 
 
 
@@ -63,7 +67,8 @@ export default function Home() {
 
   useEffect(() => {
     const mouse = mouseRef.current;
-    const body = document.querySelector("#main");
+    const body = bodys.current;
+    // const body = document.querySelector("#main");
 
     const handleMouseMove = (event) => {
       gsap.to(mouse, {
@@ -89,7 +94,7 @@ export default function Home() {
         className="w-[50px] h-[50px] rounded-full absolute top-0 left-0 border border-white z-20 pointer-events-none overflow-hidden object-cover bg-transparent text-slate-100 flex justify-center items-center font-bold -translate-x-[50%] -translate-y-[50%] mix-blend-difference"
       ></div>
 
-      <div className="h-full w-full overflow-x-hidden" id="main">
+      <div className="h-full w-full overflow-x-hidden" id="main" ref={bodys}>
         {loading ? (
           <BannnerSection />
         ) : (
