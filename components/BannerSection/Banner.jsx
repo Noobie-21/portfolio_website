@@ -78,6 +78,8 @@ const Banner = ({mouse}) => {
             </Link>
             <Link href={'/'}target='_blank'>
 
+              
+
             <AiFillLinkedin size={24} />
             </Link>
           </div>
