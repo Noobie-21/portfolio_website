@@ -24,7 +24,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log(window.location)
     const locomotiveScroll = new LocomotiveScroll();
 
     const aboutLink = document.querySelector("#about_link");
