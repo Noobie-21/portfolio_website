@@ -10,7 +10,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import logo from '@/assets/noob-logo.png'
 import {AiFillGithub , AiFillInstagram , AiFillLinkedin} from 'react-icons/ai'
 
-const Banner = ({mouse}) => {
+const Banner = () => {
 
   const nameHover = useRef(null)
   const main = useRef(null)

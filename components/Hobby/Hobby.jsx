@@ -20,16 +20,13 @@ const Hobby = () => {
     const heading_section = heading_section_ref.current
 
     const heading_inner_element = heading_section.querySelectorAll('.heading_inner_class')
-// 
-    // console.log(heading_section)
-    // document.querySelectorAll
+
 
 
     const gsapScrollTrigger = (ref , start , end) => {
       const timeline = gsap.timeline({
         
         scrollTrigger : {
-          // markers : true,
           trigger : ref,
           scroller:document.documentElement,
           start : start,

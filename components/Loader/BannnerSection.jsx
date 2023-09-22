@@ -11,11 +11,11 @@ const BannnerSection = () => {
   const main = useRef(null);
   const greeting = useRef(null);
   const greeting2 = useRef(null);
+  
   const heading1 = useRef(null);
   const heading2 = useRef(null);
   const heading3 = useRef(null);
   const heading4 = useRef(null);
-  const home = useRef(null);
 
   const homepageLoad = () => {
     const tl = gsap.timeline();
@@ -38,12 +38,7 @@ const BannnerSection = () => {
         delay: 0.5,
         zIndex : -1
       })
-      // .from(home.current , {
-      //   opacity : 0,
-      //   duration : 0.5,
-      //   delay : 0.5,
-      //   ease : "Expo.easeIn"
-      // })
+     
   }
 
   useEffect(() => {
@@ -129,9 +124,7 @@ const BannnerSection = () => {
         </div>
       </div>
 
-    {/* <div ref={home} className="w-full h-full">
-      <Banner  />
-    </div> */}
+  
       
     </>
   );
