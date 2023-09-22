@@ -22,10 +22,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true,
-    });
+    const locomotiveScroll = new LocomotiveScroll();
 
     const aboutLink = document.querySelector("#about_link");
     const about = document.querySelector("#about");
@@ -74,7 +71,7 @@ export default function Home() {
 
   useEffect(() => {
     const mouse = mouseRef.current;
-    const body = document.querySelector("body");
+    const body = document.querySelector("#main");
 
     const handleMouseMove = (event) => {
       gsap.to(mouse, {

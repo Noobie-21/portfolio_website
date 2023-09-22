@@ -46,7 +46,7 @@ const Banner = () => {
     const tl = gsap.timeline({
       scrollTrigger : {
         trigger : main.current,
-        scroller : document.documentElement,
+        // scroller : document.documentElement,
         start : "top top",
         scrub : 1,
       },  
