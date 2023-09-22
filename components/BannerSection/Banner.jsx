@@ -68,15 +68,15 @@ const Banner = ({mouse}) => {
         <div id='navbar' className={styles.navbar}>
           <Image src={logo} width={40} height={40} className={styles.logo} />
           <div className={styles.nav_center}>
-            <Link href={'https://github.com/Noobie-21'} >
+            <Link href={'https://github.com/Noobie-21'} target='_blank'>
 
             <AiFillGithub size={24} />
             </Link>
-            <Link href={'https://www.instagram.com/_.noobie__/'}>
+            <Link href={'https://www.instagram.com/_.noobie__/'}target='_blank'>
 
             <AiFillInstagram size={24} />
             </Link>
-            <Link href={'/'}>
+            <Link href={'/'}target='_blank'>
 
             <AiFillLinkedin size={24} />
             </Link>
