@@ -32,37 +32,27 @@ export default function Home() {
     const project = document.querySelector("#project");
     const projectLink = document.querySelector("#project_link");
 
-    console.log(aboutLink);
+    const handleAboutLinkClick = () => locomotiveScroll.scrollTo(about);
+    const handleProjectLinkClick = () => locomotiveScroll.scrollTo(project);
 
     setTimeout(() => {
       setLoading(false);
     }, 6500);
 
     if (!loading) {
-      aboutLink.addEventListener("click", () =>
-        locomotiveScroll.scrollTo(about)
-      );
-      projectLink.addEventListener("click", () =>
-        locomotiveScroll.scrollTo(project)
-      );
-
+      aboutLink.addEventListener("click", handleAboutLinkClick);
+      projectLink.addEventListener("click", handleProjectLinkClick);
 
       return () => {
-        aboutLink.removeEventListener("click", () =>
-          locomotiveScroll.scrollTo(about)
-        );
-        projectLink.removeEventListener("click", () =>
-          locomotiveScroll.scrollTo(project)
-        );
+        aboutLink.removeEventListener("click", handleAboutLinkClick);
+        projectLink.removeEventListener("click", handleProjectLinkClick);
       };
     }
-
-   
   }, [loading]);
 
   useEffect(() => {
     const mouse = mouseRef.current;
-    const body = document.querySelector("body");
+    const body = document.querySelector("#main");
 
     const handleMouseMove = (event) => {
       gsap.to(mouse, {
