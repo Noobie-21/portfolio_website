@@ -46,7 +46,7 @@ const Banner = () => {
     const tl = gsap.timeline({
       scrollTrigger : {
         trigger : main.current,
-        // scroller : document.documentElement,
+        scroller : document.documentElement,
         start : "top top",
         scrub : 1,
       },  
@@ -66,7 +66,7 @@ const Banner = () => {
   return (
     <div ref={main} className='relative w-full h-full'>
         <div id='navbar' className={styles.navbar}>
-          <Image src={logo} alt='Logo of aman portfolio' width={40} height={40} className={styles.logo} />
+          <Image src={logo} alt='logo of aman portfolio' width={40} height={40} className={styles.logo} />
           <div className={styles.nav_center}>
             <Link href={'https://github.com/Noobie-21'} target='_blank'>
 
