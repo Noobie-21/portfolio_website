@@ -15,7 +15,6 @@ const About = () => {
   const triggerRef = useRef(null)
 
   const Effect = (tl) => {
-    const mainEl = document.querySelector('body')
     tl.to(
       h1.current,
 

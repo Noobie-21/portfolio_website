@@ -64,7 +64,6 @@ const Project = () => {
   ];
 
   useEffect(() => {
-    const body = document.querySelector("body");
     const mouse = document.querySelector("#mouse");
 
     gsap.registerPlugin(ScrollTrigger);

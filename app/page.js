@@ -22,6 +22,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log(window.location)
     const locomotiveScroll = new LocomotiveScroll();
 
     const aboutLink = document.querySelector("#about_link");
@@ -53,17 +54,7 @@ export default function Home() {
       );
 
 
-      return () => {
-        aboutLink.removeEventListener("click", () =>
-          locomotiveScroll.scrollTo(about)
-        );
-        projectLink.removeEventListener("click", () =>
-          locomotiveScroll.scrollTo(project)
-        );
-        contactLink.removeEventListener("click", () =>
-          locomotiveScroll.scrollTo(contact)
-        );
-      };
+      
     }
 
    
@@ -80,6 +71,7 @@ export default function Home() {
         duration: 0.5,
       });
     };
+    
 
     body.addEventListener("mousemove", handleMouseMove);
 

@@ -20,7 +20,7 @@ const BannnerSection = () => {
   const homepageLoad = () => {
     const tl = gsap.timeline();
     const delay = [heading4.current, heading3.current, heading2.current, heading1.current]
-    const body = document.querySelector('#main')
+    
     
     
     delay.forEach((el , i) => {
