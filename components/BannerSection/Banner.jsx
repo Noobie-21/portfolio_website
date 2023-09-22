@@ -66,7 +66,7 @@ const Banner = () => {
   return (
     <div ref={main} className='relative w-full h-full'>
         <div id='navbar' className={styles.navbar}>
-          <Image src={logo} width={40} height={40} className={styles.logo} />
+          <Image src={logo} alt='Logo of aman portfolio' width={40} height={40} className={styles.logo} />
           <div className={styles.nav_center}>
             <Link href={'https://github.com/Noobie-21'} target='_blank'>
 
