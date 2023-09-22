@@ -27,6 +27,7 @@ export default function Home() {
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
     });
+    
 
     const aboutLink = document.querySelector("#about_link");
     const about = document.querySelector("#about");
