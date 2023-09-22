@@ -11,8 +11,6 @@ import Stack from "@/components/Stack/Stack";
 import Hobby from "@/components/Hobby/Hobby";
 import Contact from "@/components/Contact/Contact";
 import BannnerSection from "@/components/Loader/BannnerSection";
-
-
 /**
  * The `Home` function is a React component that represents the main page of the application.
  * It includes several sub-components such as `LandingPage`, `About`, `Project`, `Stack`, `Hobby`, and `Contact`.
@@ -21,27 +19,20 @@ import BannnerSection from "@/components/Loader/BannnerSection";
  */
 export default function Home() {
   const mouseRef = useRef(null);
-  const bodys = useRef(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll();
-  
+    const locomotiveScroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
 
-      const aboutLink = document.querySelector("#about_link");
-      const about = document.querySelector("#about");
-  
-      const project = document.querySelector("#project");
-      const projectLink = document.querySelector("#project_link");
-  
-      const contact = document.querySelector('#contact')
-      const contactLink = document.querySelector('#contact-link')
-   
+    const aboutLink = document.querySelector("#about_link");
+    const about = document.querySelector("#about");
+    const project = document.querySelector("#project");
+    const projectLink = document.querySelector("#project_link");
 
-
-
-
-    // console.log(aboutLink);
+    console.log(aboutLink);
 
     setTimeout(() => {
       setLoading(false);
@@ -54,12 +45,16 @@ export default function Home() {
       projectLink.addEventListener("click", () =>
         locomotiveScroll.scrollTo(project)
       );
-      contactLink.addEventListener("click", () =>
-        locomotiveScroll.scrollTo(contact)
-      );
 
 
-      
+      return () => {
+        aboutLink.removeEventListener("click", () =>
+          locomotiveScroll.scrollTo(about)
+        );
+        projectLink.removeEventListener("click", () =>
+          locomotiveScroll.scrollTo(project)
+        );
+      };
     }
 
    
@@ -67,8 +62,7 @@ export default function Home() {
 
   useEffect(() => {
     const mouse = mouseRef.current;
-    const body = bodys.current;
-    // const body = document.querySelector("#main");
+    const body = document.querySelector("body");
 
     const handleMouseMove = (event) => {
       gsap.to(mouse, {
@@ -77,7 +71,6 @@ export default function Home() {
         duration: 0.5,
       });
     };
-
 
     body.addEventListener("mousemove", handleMouseMove);
 
@@ -94,7 +87,7 @@ export default function Home() {
         className="w-[50px] h-[50px] rounded-full absolute top-0 left-0 border border-white z-20 pointer-events-none overflow-hidden object-cover bg-transparent text-slate-100 flex justify-center items-center font-bold -translate-x-[50%] -translate-y-[50%] mix-blend-difference"
       ></div>
 
-      <div className="h-full w-full overflow-x-hidden" id="main" ref={bodys}>
+      <div className="h-full w-full overflow-x-hidden" id="main">
         {loading ? (
           <BannnerSection />
         ) : (

@@ -11,16 +11,16 @@ const BannnerSection = () => {
   const main = useRef(null);
   const greeting = useRef(null);
   const greeting2 = useRef(null);
-  
   const heading1 = useRef(null);
   const heading2 = useRef(null);
   const heading3 = useRef(null);
   const heading4 = useRef(null);
+  const home = useRef(null);
 
   const homepageLoad = () => {
     const tl = gsap.timeline();
     const delay = [heading4.current, heading3.current, heading2.current, heading1.current]
-    
+    const body = document.querySelector('#main')
     
     
     delay.forEach((el , i) => {
@@ -38,7 +38,6 @@ const BannnerSection = () => {
         delay: 0.5,
         zIndex : -1
       })
-     
   }
 
   useEffect(() => {

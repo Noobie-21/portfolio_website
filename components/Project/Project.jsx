@@ -53,7 +53,7 @@ const Project = () => {
       serial_number: 3,
       project_name: "Previous Portfolio",
       project_image: portfolio,
-      projectDetails: `A simple and static portfolio website for applying job wothout any much more description`,
+      projectDetails: `A simple and static portfolio website for applying job without any much more details and description`,
       tech_stack: ["Next js", "Tailwind Css", "firebase", "atom"],
       link: "https://aman-gupta.vercel.app/",
       github: "https://github.com/Noobie-21/Aman",
@@ -64,6 +64,7 @@ const Project = () => {
   ];
 
   useEffect(() => {
+    const body = document.querySelector("body");
     const mouse = document.querySelector("#mouse");
 
     gsap.registerPlugin(ScrollTrigger);
