@@ -26,7 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
-    if(typeof document !== 'undefined'){
+  
 
       const aboutLink = document.querySelector("#about_link");
       const about = document.querySelector("#about");
@@ -36,7 +36,7 @@ export default function Home() {
   
       const contact = document.querySelector('#contact')
       const contactLink = document.querySelector('#contact-link')
-    }
+   
 
 
 
