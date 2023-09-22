@@ -140,12 +140,16 @@
 
 }
 
+.nav_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
-
-
-
-
-
+.nav_center > a:hover {
+    color: rgb(204, 122, 220);
+}
 
 
 

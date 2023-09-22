@@ -7,6 +7,8 @@ import aman from '@/assets/aman2.jpg'
 import gsap from 'gsap'
 import { useRouter } from 'next/navigation'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import logo from '@/assets/noob-logo.png'
+import {AiFillGithub , AiFillInstagram , AiFillLinkedin} from 'react-icons/ai'
 
 const Banner = ({mouse}) => {
 
@@ -58,21 +60,27 @@ const Banner = ({mouse}) => {
     })
 
     setTimeline(tl2)
-
-
-    const first_head_ref = helloRef.current;
-    const second_head_ref = helloRef.current;
-
-
-    
-
   } , [])
 
 
   return (
     <div ref={main} className='relative w-full h-full'>
         <div id='navbar' className={styles.navbar}>
-          <h1 className={styles.logo}>Logo</h1>
+          <Image src={logo} width={40} height={40} className={styles.logo} />
+          <div className={styles.nav_center}>
+            <Link href={'/'} >
+
+            <AiFillGithub size={24} />
+            </Link>
+            <Link href={'/'}>
+
+            <AiFillInstagram size={24} />
+            </Link>
+            <Link href={'/'}>
+
+            <AiFillLinkedin size={24} />
+            </Link>
+          </div>
           <div id="nav-right" className={styles.navright}>
             <Link href="#project" id='project_link' className={styles.anchor}>Project</Link>
             <Link  href="#about" id='about_link' className={styles.anchor}>About</Link>
