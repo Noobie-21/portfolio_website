@@ -148,7 +148,7 @@ const Contact = () => {
               <h1>Github</h1>
             </Link>
             <Link
-              href={"/"}
+              href={"https://www.instagram.com/_.noobie__/"}
               target="_blank"
               className={`${styles.socialHandle}    social`}
             >

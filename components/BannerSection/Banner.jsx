@@ -68,11 +68,11 @@ const Banner = ({mouse}) => {
         <div id='navbar' className={styles.navbar}>
           <Image src={logo} width={40} height={40} className={styles.logo} />
           <div className={styles.nav_center}>
-            <Link href={'/'} >
+            <Link href={'https://github.com/Noobie-21'} >
 
             <AiFillGithub size={24} />
             </Link>
-            <Link href={'/'}>
+            <Link href={'https://www.instagram.com/_.noobie__/'}>
 
             <AiFillInstagram size={24} />
             </Link>
