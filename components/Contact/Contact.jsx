@@ -122,7 +122,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className={styles.main} ref={mainRef}>
+    <div className={styles.main} ref={mainRef} id="contact">
       <div className={styles.innerDiv}>
         <div className={styles.gif} ref={gifsRef}>
           <Image

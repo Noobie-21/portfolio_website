@@ -30,10 +30,16 @@ export default function Home() {
 
     const aboutLink = document.querySelector("#about_link");
     const about = document.querySelector("#about");
+
     const project = document.querySelector("#project");
     const projectLink = document.querySelector("#project_link");
 
-    console.log(aboutLink);
+    const contact = document.querySelector('#contact')
+    const contactLink = document.querySelector('#contact-link')
+
+
+
+    // console.log(aboutLink);
 
     setTimeout(() => {
       setLoading(false);
@@ -46,6 +52,9 @@ export default function Home() {
       projectLink.addEventListener("click", () =>
         locomotiveScroll.scrollTo(project)
       );
+      contactLink.addEventListener("click", () =>
+        locomotiveScroll.scrollTo(contact)
+      );
 
 
       return () => {
@@ -54,6 +63,9 @@ export default function Home() {
         );
         projectLink.removeEventListener("click", () =>
           locomotiveScroll.scrollTo(project)
+        );
+        contactLink.removeEventListener("click", () =>
+          locomotiveScroll.scrollTo(contact)
         );
       };
     }

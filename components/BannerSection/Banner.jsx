@@ -84,7 +84,7 @@ const Banner = ({mouse}) => {
           <div id="nav-right" className={styles.navright}>
             <Link href="#project" id='project_link' className={styles.anchor}>Project</Link>
             <Link  href="#about" id='about_link' className={styles.anchor}>About</Link>
-            <Link href={'#contact'}  className={styles.anchor}>Contact</Link>
+            <Link href={'#contact'} id='contact-link'  className={styles.anchor}>Contact</Link>
           </div>
         </div>
         <div className={styles.intro}>
