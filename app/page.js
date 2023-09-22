@@ -11,6 +11,8 @@ import Stack from "@/components/Stack/Stack";
 import Hobby from "@/components/Hobby/Hobby";
 import Contact from "@/components/Contact/Contact";
 import BannnerSection from "@/components/Loader/BannnerSection";
+
+
 /**
  * The `Home` function is a React component that represents the main page of the application.
  * It includes several sub-components such as `LandingPage`, `About`, `Project`, `Stack`, `Hobby`, and `Contact`.
@@ -71,7 +73,7 @@ export default function Home() {
         duration: 0.5,
       });
     };
-    
+
 
     body.addEventListener("mousemove", handleMouseMove);
 

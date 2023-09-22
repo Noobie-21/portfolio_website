@@ -34,7 +34,7 @@ const About = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: main.current,
-        scroller: document.documentElement,
+        // scroller: document.documentElement,
         // markers: true,
         start: "-40% top",
         scrub: 3,

@@ -1,5 +1,5 @@
 "use client";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import styles from "./stack.module.css";
 import { TbBrandNextjs, TbFileTypeCss } from "react-icons/tb";
 import {
@@ -71,7 +71,7 @@ const Stack = () => {
   };
 
   //   using ref = useRef(null)
-  useLayoutEffect(() => {
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const mouse = document.querySelector("#mouse");
 
