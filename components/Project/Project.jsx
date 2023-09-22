@@ -53,7 +53,7 @@ const Project = () => {
       serial_number: 3,
       project_name: "Previous Portfolio",
       project_image: portfolio,
-      projectDetails: `When i started applying job then i need an portfolio website then i created.`,
+      projectDetails: `A simple and static portfolio website for applying job wothout any much more description`,
       tech_stack: ["Next js", "Tailwind Css", "firebase", "atom"],
       link: "https://aman-gupta.vercel.app/",
       github: "https://github.com/Noobie-21/Aman",
