@@ -76,7 +76,7 @@ const Banner = ({mouse}) => {
 
             <AiFillInstagram size={24} />
             </Link>
-            <Link href={'/'}target='_blank'>
+            <Link href={'https://www.linkedin.com/in/aman-gupta-a23a65252/'}target='_blank'>
 
             <AiFillLinkedin size={24} />
             </Link>

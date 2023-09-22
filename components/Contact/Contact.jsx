@@ -156,7 +156,7 @@ const Contact = () => {
               <h1>INSTAGRAM</h1>
             </Link>
             <Link
-              href={"/"}
+              href={"https://www.linkedin.com/in/aman-gupta-a23a65252/"}
               target="_blank"
               className={`${styles.socialHandle}  social`}
             >

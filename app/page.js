@@ -1,7 +1,6 @@
 "use client";
 // import Lenis from '@studio-freight/lenis'
 import { useEffect, useRef, useState } from "react";
-import LandingPage from "@/components/Landing_Page/LandingPage";
 import Banner from "@/components/BannerSection/Banner";
 import gsap from "gsap";
 import About from "@/components/About/About";
