@@ -97,7 +97,7 @@ const Hobby = () => {
               <h1>Reading Books</h1>
               <p>
                 One of the best habit i accquire is book reading, yet i am not active reader, but i consider to complete one-two book in a month.
-                some books are :- &quot;Rich and Poor Dad&quot; , &quot;The subtal art of not giving fuck&quot; , &quot;The Atomic habit&quot;.
+                some books are :- 	&#8220;Rich and Poor Dad	&#8220; , 	&#8220;The subtal art of not giving fuck	&#8220; , 	&#8220;The Atomic habit	&#8220;.
               </p>
             </div>
             <div className={`${styles.booksHobbySection} hobby_section_class`}>
